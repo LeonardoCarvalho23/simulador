@@ -102,6 +102,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\logo-itau.png" />
+    <Content Include="Content\wizard.css" />
     <Content Include="Scripts\JavaScript.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\jquery.bootstrap.wizard.js" />
@@ -112,6 +113,7 @@
     <Content Include="Content\prettify.css" />
     <Content Include="Scripts\prettify.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Wizard.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +139,7 @@
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Views\Home\Wizard.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

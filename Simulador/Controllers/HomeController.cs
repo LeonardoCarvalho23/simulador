@@ -13,5 +13,10 @@ namespace Simulador.Controllers
         {
             return View();
         }
+
+        public ActionResult wizard()
+        {
+            return View();
+        }
     }
 }

@@ -6,13 +6,14 @@
     <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
         body {
-            padding-top: 60px;
+            padding-top: 70px;
             padding-bottom: 40px;
         }
 
         .sidebar-nav {
             padding: 9px 0;
         }
+
         .pager {
             position: relative;
             bottom: 0;
@@ -21,8 +22,10 @@
 
         .background-header {
             background: #edeceb;
-            height : 86px;
+            height: 86px;
+            background: url(../../Content/bg-header.gif) repeat-x
         }
+
         .logo {
             width: 75px;
             height: 84px;
@@ -36,9 +39,96 @@
             top: 18px;
         }
 
-        .navbar-nav{
-            padding-left:50%;
+        .navbar-nav {
+            padding-left: 50%;
+        }
 
+        .navbar-inverse {
+            border-color: #b7b0b0;
+        }
+
+        .navbar ul {
+            list-style-type: none; /*to remove bullets*/
+            text-align: center;
+            margin: 0 auto;
+            padding: 0px;
+            display: table;
+            overflow: hidden;
+        }
+
+        .navbar li {
+            float: left;
+            padding: 2px;
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .progress-bar, .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+            background-color: rgb(1, 31, 120);
+        }
+
+
+
+        a, h1, h2, h3, h4, h5, h6 {
+            font-family: Arial,sans-serif;
+            color: #f47920;
+        }
+
+        .container {
+            padding: 1em;
+            background: #f9f9f9;
+        }
+
+        .progress {
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
+
+        .blocks {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .block {
+            position: relative;
+            width: 33.3333333333%;
+            height: 325px;
+            max-height: 325px;
+            margin-right: 1em;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+            .block:hover .block__body {
+                position: absolute;
+                top: 0;
+                background: rgb(1, 31, 120);
+                color: #fff;
+                height: 100%;
+                transition: top .5s;
+            }
+
+
+
+        .titulo {
+            text-align: center;
+        }
+
+        .block__body {
+            padding: 1em;
+            top: 100%;
+        }
+
+        }
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px; /* Height of the footer */
+            background: #6cf;
         }
     </style>
 </head>
@@ -59,8 +149,8 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Inicio</a></li>
-                    <li class=""><a href="#">Simulação</a></li>
+                    @*<li class="active"><a href="#">Inicio</a></li>
+                        <li class=""><a href="#">Simulação</a></li>*@
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -74,85 +164,141 @@
 
                         <div class="span11">
                             <a name="demo"></a>
-                            <h2>Demo</h2>
-                            <p>Basic Demo Example.</p>
+                            <div class="titulo">
+                                <h2>Demo</h2>
+                                <p>Basic Demo Example.</p>
+                            </div>
+
                             <div id="rootwizard">
                                 <div class="navbar">
                                     <div class="navbar-inner">
                                         <div class="container">
                                             <ul>
-                                                <li><a href="#tab1" data-toggle="tab">First</a></li>
-                                                <li><a href="#tab2" data-toggle="tab">Second</a></li>
-                                                <li><a href="#tab3" data-toggle="tab">Third</a></li>
+                                                <li><a href="#tab1" data-toggle="tab" class="fa fa-home fa-4x"></a></li>
+                                                <li><a href="#tab2" data-toggle="tab"class="fa fa-question fa-4x"></a></li>
+                                                <li><a href="#tab3" data-toggle="tab"class="fa fa-plus fa-4x"></a></li>
+                                                <li><a href="#tab4" data-toggle="tab" class="fa fa-certificate fa-4x"></a></li>
                                             </ul>
+                                            <div id="bar" class="progress progress-striped active">
+                                                <div class="progress-bar"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div id="bar" class="progress progress-striped active">
-                                    <div class="progress-bar"></div>
-                                </div>
+                                <hr>
                                 <div class="tab-content">
 
                                     <div class="tab-pane" id="tab1">
-                                        Criar aqui todo o simulador
+                                        <div class="container">
+                                            <h2>Demo</h2>
+                                            <i>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel eros ut urna mollis cursus ut blandit tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce eleifend lorem vitae sagittis lobortis. Vivamus vitae eros non massa euismod luctus ac quis leo. Quisque ut fermentum lorem. Mauris volutpat nulla non consequat venenatis. Cras quis volutpat erat, vitae blandit mauris. Proin faucibus sagittis mi, quis cursus risus mollis id. Proin orci ligula, commodo at lobortis id, cursus a urna. Cras ex lorem, fermentum vitae nulla a, dignissim posuere nisl. Nullam ut leo convallis, dapibus risus in, tempor urna. Maecenas in tortor eu ex facilisis tempus sed vitae mi. Nulla mi eros, vestibulum nec neque vitae, efficitur imperdiet diam.
+
+                                                Aliquam pulvinar tincidunt rutrum. Vestibulum volutpat erat lorem, eget vestibulum odio sagittis sed. In dapibus neque tortor. Curabitur auctor eros sapien. Etiam aliquam nunc risus, a hendrerit quam accumsan eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer malesuada interdum ipsum, vel ultricies sem imperdiet nec. Nullam nunc mauris, tempus eu porttitor rhoncus, faucibus quis sem. In tellus ipsum, ultrices vitae gravida sagittis, porttitor eu dolor. Nunc non libero volutpat metus condimentum cursus. Integer bibendum feugiat odio ac finibus. Pellentesque elementum arcu et nisl venenatis, a efficitur enim molestie. Phasellus massa diam, maximus in est id, commodo eleifend dui. Nulla ornare lorem massa, id posuere nisi maximus nec.
+
+                                                Sed vel augue dictum, scelerisque justo in, hendrerit enim. Nulla condimentum purus libero, et dictum lacus faucibus in. Fusce auctor lorem dui, in pulvinar nulla vehicula interdum. Ut quis lobortis dui. Praesent quis urna sed ipsum lacinia lacinia. Mauris sit amet condimentum risus. Nunc convallis justo ipsum, facilisis bibendum nibh vestibulum consectetur.
+
+                                                Vivamus non viverra massa. Suspendisse accumsan lorem ut diam lobortis, ac molestie massa facilisis. Etiam efficitur enim a sodales fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie ut felis ut molestie. Nulla sit amet velit eget nulla euismod tincidunt a at elit. Proin augue erat, dapibus at blandit eget, porttitor vel arcu.
+
+                                                Etiam sagittis rutrum ex finibus porttitor. Phasellus posuere vestibulum nisi vel ultrices. Morbi cursus egestas erat vitae porta. Nulla maximus sapien nisl, in commodo orci euismod nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi sed dolor sit amet sapien facilisis venenatis vitae sed turpis. Fusce luctus iaculis massa, at faucibus neque vestibulum vel. Curabitur volutpat sapien ex, ac suscipit nulla posuere nec. Quisque lacinia suscipit tincidunt.
+                                            </i>
+                                        </div>
+
                                     </div>
 
                                     <div class="tab-pane" id="tab2">
-                                        <div class="row">
-                                            <div class="card col-lg-1 HoverDiv" style="width: 33%;">
-                                                <img class="card-img-top" src="..." alt="Imagem">
-                                                <div class="card-block">
-                                                    <h4 class="card-title">Plano 1</h4>
-                                                    <p class="card-text">Explicação do plano</p>
-                                                </div>
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item">Item 1</li>
-                                                    <li class="list-group-item">Item 2</li>
-                                                    <li class="list-group-item">Item 3</li>
-                                                </ul>
-                                                <div class="card-block">
-                                                    <button class="btn btn-primary">Choose</button>
-                                                </div>
-                                            </div>
-                                            <div class="card col-lg-1 HoverDiv" style="width: 33%;">
-                                                <img class="card-img-top" src="..." alt="Imagem">
-                                                <div class="card-block">
-                                                    <h4 class="card-title">Plano 2</h4>
-                                                    <p class="card-text">Explicação do plano</p>
-                                                </div>
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item">Item 1</li>
-                                                    <li class="list-group-item">Item 2</li>
-                                                    <li class="list-group-item">Item 3</li>
-                                                </ul>
-                                                <div class="card-block">
-                                                    <button class="btn btn-primary">Choose</buttonclass="btn>
-                                                </div>
-                                            </div>
-                                            <div class="card col-lg-1 HoverDiv" style="width: 33%;">
-                                                <img class="card-img-top" src="..." alt="Imagem">
-                                                <div class="card-block">
-                                                    <h4 class="card-title">Plano 3</h4>
-                                                    <p class="card-text">Explicação do plano</p>
-                                                </div>
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item">Item 1</li>
-                                                    <li class="list-group-item">Item 2</li>
-                                                    <li class="list-group-item">Item 3</li>
-                                                </ul>
-                                                <div class="card-block">
-                                                    <button class="btn btn-primary">Choose</button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <div class="container">Simulador</div>
 
                                     </div>
 
                                     <div class="tab-pane" id="tab3">
-                                        3
+                                        <div class="container">
+                                            <div class="blocks">
+                                                <div class="block">
+                                                    @*<img src="https://placeimg.com/1000/600" alt="" class="block__img" />*@
+                                                    <div class="block__body">
+                                                        <h3>Card Title</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ullam eligendi reprehenderit natus quae! Optio quae repellat quasi, magnam inventore iusto fuga delectus minima labore alias necessitatibus quia error excepturi.</p>
+                                                        <a href="" class="btn btn--pill btn--translucent">Learn More</a>
+                                                    </div>
+                                                </div><!-- .block -->
+
+                                                <div class="block">
+                                                    @*<img src="https://placeimg.com/1000/600" alt="" class="block__img" />*@
+                                                    <div class="block__body">
+                                                        <h3>Card Title</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ullam eligendi reprehenderit natus quae! Optio quae repellat quasi, magnam inventore iusto fuga delectus minima labore alias necessitatibus quia error excepturi.</p>
+                                                        <a href="" class="btn btn--pill btn--translucent">Learn More</a>
+                                                    </div>
+                                                </div><!-- .block -->
+
+                                                <div class="block">
+                                                    @*<img src="https://placeimg.com/1000/600" alt="" class="block__img" />*@
+                                                    <div class="block__body">
+                                                        <h3>Card Title</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ullam eligendi reprehenderit natus quae! Optio quae repellat quasi, magnam inventore iusto fuga delectus minima labore alias necessitatibus quia error excepturi.</p>
+                                                        <a href="" class="btn btn--pill btn--translucent">Learn More</a>
+                                                    </div>
+                                                </div><!-- .block -->
+
+                                            </div><!-- .blocks -->
+                                        </div>
+                                        @*<div class="row">
+                                                <div class="card col-lg-1 HoverDiv" style="width: 33%;">
+                                                    <img class="card-img-top" src="..." alt="Imagem">
+                                                    <div class="card-block">
+                                                        <h4 class="card-title">Plano 1</h4>
+                                                        <p class="card-text">Explicação do plano</p>
+                                                    </div>
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">Item 1</li>
+                                                        <li class="list-group-item">Item 2</li>
+                                                        <li class="list-group-item">Item 3</li>
+                                                    </ul>
+                                                    <div class="card-block">
+                                                        <button class="btn btn-primary">Choose</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card col-lg-1 HoverDiv" style="width: 33%;">
+                                                    <img class="card-img-top" src="..." alt="Imagem">
+                                                    <div class="card-block">
+                                                        <h4 class="card-title">Plano 2</h4>
+                                                        <p class="card-text">Explicação do plano</p>
+                                                    </div>
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">Item 1</li>
+                                                        <li class="list-group-item">Item 2</li>
+                                                        <li class="list-group-item">Item 3</li>
+                                                    </ul>
+                                                    <div class="card-block">
+                                                        <button class="btn btn-primary">Choose</buttonclass="btn>
+                                                    </div>
+                                                </div>
+                                                <div class="card col-lg-1 HoverDiv" style="width: 33%;">
+                                                    <img class="card-img-top" src="..." alt="Imagem">
+                                                    <div class="card-block">
+                                                        <h4 class="card-title">Plano 3</h4>
+                                                        <p class="card-text">Explicação do plano</p>
+                                                    </div>
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">Item 1</li>
+                                                        <li class="list-group-item">Item 2</li>
+                                                        <li class="list-group-item">Item 3</li>
+                                                    </ul>
+                                                    <div class="card-block">
+                                                        <button class="btn btn-primary">Choose</button>
+                                                    </div>
+                                                </div>
+                                            </div>*@
+
+                                    </div>
+
+                                    <div class="tab-pane" id="tab4">
+                                        <div class="container">Final</div>
+
                                     </div>
                                     <hr>
-                                    <ul class="pager wizard">                                        
+                                    <ul class="pager wizard">
                                         <li class="previous first" style="display:none;"><a href="javascript:;">First</a></li>
                                         <li class="previous"><a href="javascript:;">Previous</a></li>
                                         <li class="next last" style="display:none;"><a href="javascript:;">Last</a></li>
@@ -167,9 +313,8 @@
         </div>
     </div>
 
-    
-    </div><!--/.fluid-container-->
 
+    </div><!--/.fluid-container-->
 </body>
 </html>
 
@@ -177,3 +322,4 @@
 <script type="text/javascript" src="~/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="~/Scripts/jquery.bootstrap.wizard.js"></script>
 <script type="text/javascript" src="~/Scripts/JavaScript.js"></script>
+<script type="text/javascript" src="http://use.fontawesome.com/b332eaaf45.js"></script>

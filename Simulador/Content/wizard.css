@@ -1,0 +1,281 @@
+﻿.wizard {
+    margin: 20px auto;
+    background: #fff;
+}
+
+    .wizard .nav-tabs {
+        position: relative;
+        margin: 40px auto;
+        margin-bottom: 0;
+        border-bottom-color: #e0e0e0;
+    }
+
+    .wizard > div.wizard-inner {
+        position: relative;
+    }
+
+.connecting-line {
+    height: 2px;
+    background: #e0e0e0;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    border: 0;
+    border-bottom-color: transparent;
+}
+
+span.round-tab {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+    span.round-tab i {
+        color: #555555;
+    }
+
+.wizard li.active span.round-tab {
+    background: #fff;
+    border: 2px solid #5bc0de;
+}
+
+    .wizard li.active span.round-tab i {
+        color: #5bc0de;
+    }
+
+span.round-tab:hover {
+    color: #333;
+    border: 2px solid #333;
+}
+
+.wizard .nav-tabs > li {
+    width: 25%;
+}
+
+.wizard li:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 0;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 5px solid transparent;
+    border-bottom-color: #5bc0de;
+    transition: 0.1s ease-in-out;
+}
+
+.wizard li.active:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 1;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #5bc0de;
+}
+
+.wizard .nav-tabs > li a {
+    width: 70px;
+    height: 70px;
+    margin: 20px auto;
+    border-radius: 100%;
+    padding: 0;
+}
+
+    .wizard .nav-tabs > li a:hover {
+        background: transparent;
+    }
+
+.wizard .tab-pane {
+    position: relative;
+    padding-top: 50px;
+}
+
+.wizard h3 {
+    margin-top: 0;
+    text-align:center;  
+}
+
+.wizard p {
+    margin: 10px;
+}
+
+@media( max-width : 585px ) {
+
+    .wizard {
+        width: 90%;
+        height: auto !important;
+    }
+
+    span.round-tab {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 35%;
+    }
+}
+
+body {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    background: #f9f9f9;
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+.pager {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.background-header {
+    background: #edeceb;
+    height: 86px;
+    background: url(../../Content/bg-header.gif) repeat-x
+}
+
+.logo {
+    width: 75px;
+    height: 84px;
+    display: block;
+    float: left;
+}
+
+.logoItau {
+    position: relative;
+    left: 15px;
+    top: 18px;
+}
+
+.navbar-nav {
+    padding-left: 50%;
+}
+
+.navbar-inverse {
+    border-color: #b7b0b0;
+}
+
+.navbar ul {
+    list-style-type: none; /*to remove bullets*/
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px;
+    display: table;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+    padding: 2px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress-bar, .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: rgb(1, 31, 120);
+}
+
+
+
+a, h1, h2, h3, h4, h5, h6 {
+    font-family: Arial,sans-serif;
+    color: #f47920;
+}
+
+.container {
+    padding: 1em;
+    
+}
+
+.progress {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.blocks {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom:10px;
+}
+
+.block {
+    position: relative;
+    width: 33.3333333333%;
+    height: 325px;
+    max-height: 325px;
+    margin-right: 1em;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+    .block:hover .block__body {
+        position: absolute;
+        top: 0;
+        background: rgb(1, 31, 120);
+        color: #fff;
+        height: 100%;
+        transition: top .5s;
+    }
+
+
+
+
+
+.titulo {
+    text-align: center;
+}
+
+.block__body {
+    padding: 1em;
+    top: 100%;
+}
+
+}
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Height of the footer */
+    background: #6cf;
+}
+
+.check {
+    opacity: 0.5;
+}
